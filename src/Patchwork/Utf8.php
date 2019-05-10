@@ -53,7 +53,7 @@ class Utf8
                 }
 
                 if ($glibc) {
-                    $t = iconv('UTF-8', 'ASCII//TRANSLIT', $c);
+                    $t = iconv('UTF-8', 'ASCII//IGNORE//TRANSLIT', $c);
                 } else {
                     $t = iconv('UTF-8', 'ASCII//IGNORE//TRANSLIT', $c);
 
