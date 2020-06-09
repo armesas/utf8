@@ -53,9 +53,9 @@ class Utf8
                 }
 
                 if ($glibc) {
-                    $t = iconv('UTF-8', 'ASCII//IGNORE//TRANSLIT', $c);
+                    $t = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $c);
                 } else {
-                    $t = iconv('UTF-8', 'ASCII//IGNORE//TRANSLIT', $c);
+                    $t = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $c);
 
                     if (!isset($t[0])) {
                         $t = '?';
